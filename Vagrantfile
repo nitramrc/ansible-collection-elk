@@ -18,8 +18,8 @@ Vagrant.configure("2") do |config|
       node.vm.box = "ubuntu/jammy64"
       node.vm.hostname = "elk-ubuntu-#{i}"
       config.vm.provider "virtualbox" do |v|
-          v.memory = 4096
-          v.cpus = 4
+          v.memory = 2048
+          v.cpus = 2
       end
       node.vm.network "private_network", ip: "192.168.56.11#{i}"
       node.vm.provision "shell", inline: $script
